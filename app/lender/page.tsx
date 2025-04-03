@@ -19,7 +19,7 @@ const Lender = (props: Props) => {
           <Image src={axispfp} alt="pfp" />
           <div className='flex flex-col gap-2 text-white'>
             <p>Welcome Back!</p>
-            <p className='text-xl font-medium'>Axis Bank</p>
+            <p className='text-xl font-medium'>Kubar Bank</p>
           </div>
         </div>
         <div className='text-white cursor-pointer'>

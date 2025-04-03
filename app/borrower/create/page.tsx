@@ -371,7 +371,7 @@ const Create = () => {
                     <div className="flex gap-7">
                       <div className="flex flex-col justify-center">
                         <Image src={axis} alt="img" className="ml-1.5" />
-                        <p className="text-xs">AXIS BANK</p>
+                        <p className="text-xs">KUBAR BANK</p>
                       </div>
                       <p className="flex flex-col text-sm font-bold mt-3">XXXXXXXXX1234&nbsp;
                         <span className="text-purple-950">SAVINGS</span></p>
@@ -383,7 +383,7 @@ const Create = () => {
                     <div className="flex gap-7">
                       <div className="flex flex-col justify-center">
                         <Image src={axis} alt="img" className="ml-1.5" />
-                        <p className="text-xs">AXIS BANK</p>
+                        <p className="text-xs">KUBAR BANK</p>
                       </div>
                       <p className="flex flex-col text-sm font-bold mt-3">XXXXXXXXX1234&nbsp;
                         <span className="text-purple-950">SAVINGS</span></p>
@@ -508,7 +508,7 @@ const Create = () => {
                   <div className='w-full border rounded-md'>
                     <div className='p-4 flex gap-4 border-b items-center font-semibold'>
                       <Image src={axis} alt='account' />
-                      <p>Axis Bank</p>
+                      <p>Kubar Bank</p>
                     </div>
                     <div>
                       <Accordion type="single" collapsible className="w-full px-4">
