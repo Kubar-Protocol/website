@@ -1,0 +1,64 @@
+name: Main Application (Dev) Deployment
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    id-token: write
+    contents: read
+
+jobs:
+    deploy:
+        name: Build & Deploy to Cloud Run
+        runs-on: ubuntu-latest
+
+        env:
+            PROJECT_ID: kubar-protocol-main
+            REGION: asia-south1
+            REPO_NAME: website
+            DEPLOY_DIR: app/deploy/dev
+
+        steps:
+            - name: 'Git repository checkout'
+              uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
+
+            - name: 'Extract GUTHUB_SHA'
+              id: github_sha
+              run: |
+                    SHA=$(echo $GITHUB_SHA | cut -c1-7)
+                    echo "github_sha=$SHA" >> "$GITHUB_OUTPUT"
+
+            - name: 'Run Docker build'
+              run: docker build . -t asia-south1-docker.pkg.dev/kubar-protocol-main/kubar-application-repo/${{env.REPO_NAME}}:dev.${{steps.github_sha.outputs.github_sha}} -f deploy/dev/Dockerfile
+
+
+            - id: 'auth'
+              uses: 'google-github-actions/auth@v2'
+              with:
+                    project_id: ${{env.PROJECT_ID}}
+                    workload_identity_provider: 'projects/90747239762/locations/global/workloadIdentityPools/kup-dev-wif-pool-gh/providers/gh-workflow'
+
+            - name: 'Docker login'
+              run: gcloud auth configure-docker asia-south1-docker.pkg.dev
+
+            - name: 'Push docker image'
+              run: docker push asia-south1-docker.pkg.dev/kubar-protocol-main/kubar-application-repo/${{env.REPO_NAME}}:dev.${{steps.github_sha.outputs.github_sha}}
+
+            - name: 'Deploy to CR'
+              run: |
+                    gcloud run deploy ${{env.REPO_NAME}} \
+                    --image asia-south1-docker.pkg.dev/kubar-protocol-main/kubar-application-repo/${{env.REPO_NAME}}:dev.${{steps.github_sha.outputs.github_sha}} \
+                    --platform managed \
+                    --region ${{env.REGION}} \
+                    --port 8081 \
+                    --allow-unauthenticated \
+                    --quiet \
+                    --min-instances 1 \
+                    --max-instances 2 \
+                    --cpu 2 \
+                    --memory 4Gi \
+                    --no-cpu-throttling
