@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import React, { useState } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs";
 import avatarpfp from "../assets/images/avatar.png";
 import account from "../assets/icons/account.svg";
 import browseoffering from "../assets/icons/browseoffering.svg";

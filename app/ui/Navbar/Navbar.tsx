@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Menu, X } from 'lucide-react';
-import { Button } from "@/components/ui/button"
+import { Button } from "../../../components/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -12,14 +12,14 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
+} from "../../../components/ui/dialog"
 import lender from "../../assets/images/lender.png"
 import borrower from "../../assets/images/borrower.png"
 import logo from '../../assets/icons/kubarlogo.png'
 import Image from 'next/image';
-import { Label } from '@/components/ui/label';
+import { Label } from '../../../components/ui/label';
 import { signIn, signOut , useSession } from 'next-auth/react';
-import { Appbar } from '@/components/ui/Loginbutton';
+import { Appbar } from '../../../components/ui/Loginbutton';
 
 type Props = {};
 

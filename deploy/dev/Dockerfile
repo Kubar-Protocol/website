@@ -5,13 +5,14 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Copy package*.json to /app
-COPY package*.json ./
-
-# Copy remaining files
 COPY . .
 
 # Install dependencies
 RUN npm install --production
+
+# Set Environment variables
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
 
 # Build the application
 RUN npm run build

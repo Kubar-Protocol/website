@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../components/ui/tabs"
 import axispfp from '../assets/images/axispfp.png'
 import account from '../assets/icons/account.svg'
 import browseoffering from '../assets/icons/browseoffering.svg'

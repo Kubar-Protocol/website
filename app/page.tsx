@@ -1,5 +1,5 @@
 'use client'
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -8,9 +8,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
+} from "../components/ui/dialog"
+import { Label } from "../components/ui/label";
+import { Input } from "../components/ui/input";
 import { ArrowRight, Play } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";

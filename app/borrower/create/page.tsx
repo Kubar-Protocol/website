@@ -1,15 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Button } from "@/components/ui/button";
+import { Input } from "../../../components/ui/input";
+import { Label } from "../../../components/ui/label"
+import { RadioGroup, RadioGroupItem } from "../../../components/ui/radio-group"
+import { Button } from "../../../components/ui/button";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/components/ui/input-otp"
+} from "../../../components/ui/input-otp"
 import {
   Dialog,
   DialogContent,
@@ -18,14 +18,14 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+} from "../../../components/ui/dialog"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../components/ui/tabs"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "../../../components/ui/accordion"
 import { ArrowRight, BadgeCheck } from 'lucide-react'
 import { MoveRight, Upload } from "lucide-react";
 import Image from "next/image";

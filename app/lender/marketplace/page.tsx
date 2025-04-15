@@ -1,14 +1,14 @@
 import React from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../components/ui/tabs"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "../../../components/ui/accordion"
 import Image from 'next/image'
 import account from '../../assets/icons/account.svg'
-import { Button } from '@/components/ui/button'
+import { Button } from '../../../components/ui/button'
 import { ArrowRight, BadgeCheck } from 'lucide-react'
 
 type Props = {}

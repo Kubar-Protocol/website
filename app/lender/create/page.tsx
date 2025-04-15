@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from 'react'
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Switch } from "@/components/ui/switch"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Input } from "../../../components/ui/input"
+import { Label } from "../../../components/ui/label"
+import { Textarea } from "../../../components/ui/textarea"
+import { Switch } from "../../../components/ui/switch"
+import { Checkbox } from "../../../components/ui/checkbox"
 import {
   Card,
   CardContent,
@@ -12,8 +12,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Button } from '@/components/ui/button'
+} from "../../../components/ui/card"
+import { Button } from '../../../components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import successtick from '../../assets/images/successtick.svg'
 import Image from 'next/image'

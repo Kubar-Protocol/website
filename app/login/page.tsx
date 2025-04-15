@@ -2,7 +2,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Mail, Lock, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../components/ui/button';
 
 interface LoginProps {
   onSwitchMode: () => void;
